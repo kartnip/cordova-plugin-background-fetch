@@ -21,35 +21,6 @@
         <clobbers target="window.BackgroundFetch" />
     </js-module>
 
-    <platform name="ios">
-        <!-- Add BGTaskSchedulerPermittedIdentifiers com.transistorsoft.fetch -->
-        <config-file target="*-Info.plist" parent="BGTaskSchedulerPermittedIdentifiers">
-            <array>
-                <string>com.transistorsoft.fetch</string>
-            </array>
-        </config-file>
-
-        <!-- required background modes:  App registers for location updates -->
-        <config-file target="*-Info.plist" parent="UIBackgroundModes">
-            <array>
-                <string>fetch</string>
-                <string>processing</string>
-            </array>
-        </config-file>
-
-        <config-file target="config.xml" parent="/*">
-            <feature name="BackgroundFetch">
-                <param name="ios-package" value="CDVBackgroundFetch"/>
-                <param name="onload" value="true"/>
-            </feature>
-        </config-file>
-
-        <framework src="src/ios/TSBackgroundFetch.xcframework" custom="true"/>
-
-        <source-file src="src/ios/CDVBackgroundFetch.m" />
-        <header-file src="src/ios/CDVBackgroundFetch.h" />
-    </platform>
-
     <platform name="android">
 
         <source-file src="src/android/CDVBackgroundFetch.java" target-dir="src/com/transistorsoft/cordova/backgroundfetch" />
