@@ -5,7 +5,7 @@
   "main": "./src/typescript/index.js",
   "types": "./src/typescript/index.d.ts",
   "scripts": {
-    "build": "tsc -p src/typescript",
+    "build": "npm install typescript && tsc -p src/typescript",
     "prepublish": "npm run build"
   },
   "cordova": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kartnip/cordova-plugin-background-fetch.git"
+    "url": "https://github.com/transistorsoft/cordova-plugin-background-fetch.git"
   },
   "keywords": [
     "cordova",
