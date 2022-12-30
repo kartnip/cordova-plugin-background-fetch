@@ -14,7 +14,6 @@
     <engines>
         <engine name="cordova" version=">=7.1.0" />
         <engine name="cordova-android" version=">=7.0.0"/>
-        <engine name="cordova-ios" version=">=4.4.0"/>
     </engines>
 
     <js-module src="www/BackgroundFetch.js" name="BackgroundFetch">
